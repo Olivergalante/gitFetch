@@ -8,6 +8,11 @@ async function fetchGit(apifetch) {
 		const profileAvatar = data.avatar_url;
 		const followers = data.followers_url;
 		console.log(profileAvatar, followers);
+		document.querySelector(
+			".avatarResults"
+		).innerHTML = `<img src="${profileAvatar}"/>`;
+		//document.querySelector(".followers").innerHTML = `<ol></ol>`;
+
 		return data;
 	} catch (error) {
 		console.error(error);
@@ -21,5 +26,6 @@ submitButton.addEventListener("click", function (event) {
 	const gitHubName = gitHubNamespace.split(" ").join("");
 	const apifetch = `https://api.github.com/users/${gitHubName}`;
 	console.log(apifetch);
+
 	fetchGit(apifetch);
 });
