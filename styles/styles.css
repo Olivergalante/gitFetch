@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 600px;
+  background-color: lightblue;
+  height: 400px;
+}
+
+div {
+  text-align: center;
+}
