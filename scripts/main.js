@@ -6,13 +6,13 @@ async function fetchGit(apifetch) {
 		const response = await fetch(apifetch);
 		const data = await response.json();
 		const profileAvatar = data.avatar_url;
-		const followers = data.followers_url;
-		console.log(profileAvatar, followers);
+		const followers = data.followers;
 		document.querySelector(
-			".avatarResults"
+			"#avatarResults"
 		).innerHTML = `<img src="${profileAvatar}"/>`;
-		//document.querySelector(".followers").innerHTML = `<ol></ol>`;
-
+		document.querySelector(
+			"#followers"
+		).innerHTML = `<p>Followers:"${followers}"</p>`;
 		return data;
 	} catch (error) {
 		console.error(error);

@@ -7,11 +7,13 @@
       content="width=device-width, initial-scale=1.0">
     <title>Git Hub Finder</title>
     <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet"
       href="./styles/styles.css">
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="search">
       <h1>Git Fetch!</h1>
       <p>Search Git Hub profile's</p>
       <form class="form" id="categoryListForm">
@@ -19,11 +21,18 @@
         <button id="submitButton" class="button"
           type="submit">Fetch
           Data</button><br>
+    </div>
+    <div class="wrapper">
       </form>
-      <div class="avatarResults">Link to Avatar
-      </div>
-      <div class="followes">Link to your
-        follower's</div>
+      <figure class="image is-128x128">
+        <div class="avatar-results"
+          id="avatarResults">Link to Avatar
+        </div>
+        <div id="followers" class="followes">Link
+          to
+          your
+          follower's</div>
+      </figure>
     </div>
   </body>
   <script src="./scripts/main.js"></script>

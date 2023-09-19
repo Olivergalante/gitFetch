@@ -2,13 +2,20 @@
   box-sizing: border-box;
 }
 
-.wrapper {
+.wrapper .search {
   margin: 0 auto;
   width: 600px;
   background-color: lightblue;
-  height: 400px;
+  height: 100vh;
+
 }
 
 div {
   text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
